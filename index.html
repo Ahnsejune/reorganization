@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈페이지 개편 중 | 안내</title>
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --bg-color: #f8fafc;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --white: #ffffff;
+            --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            line-height: 1.7;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            padding: 2rem;
+            z-index: 10;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 4rem 2rem;
+            border-radius: 32px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            position: relative;
+        }
+
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 90% 80%, rgba(99, 102, 241, 0.08) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        .icon-wrapper {
+            margin-bottom: 2rem;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            background-color: #eef2ff;
+            border-radius: 50%;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .icon-wrapper svg {
+            width: 48px;
+            height: 48px;
+            color: var(--primary-color);
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.03em;
+            color: var(--text-main);
+            word-break: keep-all;
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+            word-break: keep-all;
+            font-weight: 400;
+        }
+
+        .divider {
+            width: 40px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 2rem auto;
+            border-radius: 2px;
+            opacity: 0.3;
+        }
+
+        .footer {
+            margin-top: 3rem;
+            font-size: 0.875rem;
+            color: #94a3b8;
+            letter-spacing: 0.05em;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 1.5rem;
+            }
+            .card {
+                padding: 3rem 1.5rem;
+            }
+            h1 {
+                font-size: 1.75rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-gradient"></div>
+
+    <div class="container">
+        <div class="card">
+            <div class="icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+            </div>
+
+            <h1>홈페이지 개편 안내</h1>
+            <p>더 나은 서비스를 위해 사이트를 새롭게 단장하고 있습니다. 잠시만 기다려 주시면 멋진 모습으로 돌아오겠습니다.</p>
+            
+            <div class="divider"></div>
+
+            <div class="footer">
+                &copy; 2026 Your Company. All rights reserved.
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
